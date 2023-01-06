@@ -1,85 +1,85 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { ReactComponent as ReactLogo } from "../assets/512-original-logo.svg";
-import heroImg from "../assets/step-into-web3.png";
-import supportImg from "../assets/ready-to-explore.png";
+import logo from "../assets/logo/d-letter-generic-logo.png";
+import heroImg from "../assets/bckgd-img/HeroSectionBckgd.jpeg";
+import featureImg from "../assets/landing-page/features-connections.webp";
+import supportImg from "../assets/landing-page/xoc-currency.jpeg";
 import learnImg from "../assets/card-images/cognitive-learn.png";
 import connectImg from "../assets/card-images/world-connect-community.png";
 import earnImg from "../assets/card-images/gamification-earn-rewards.png";
-import minnvuImg1 from "../assets/discover-minnvus/minnvu-card-1.png";
-import minnvuImg2 from "../assets/discover-minnvus/minnvu-card-2.png";
-import minnvuImg3 from "../assets/discover-minnvus/minnvu-card-3.png";
-import minnvuImg4 from "../assets/discover-minnvus/minnvu-card-4.png";
 
 const Landing = () => {
   return (
     <Fragment>
       <HeroContainer>
         <div className="hero-copy-container">
-          <h1>
-            Aprende jugando y
-            <br /> descubre Web3 ganando
+          <h1 className="uk-text-bold">
+            Conectamos comunidades
+            <br />
+            Impulsamos DeFi
           </h1>
+          <h3>
+            Conecta, contribuye y construye el futuro del internet, la propiedad
+            digital y las comunidades
+          </h3>
           <div className="button-container">
-            <button className="uk-button uk-button-white uk-button-large">
-              ¡Quiero aprender!{" "}
-              <div className="btn-logo-container">
-                <ReactLogo />
-              </div>
-            </button>
+            <Link to="/contacto">
+              <button className="uk-button uk-button-primary uk-button-large uk-text-bold">
+                ¡Conectar!
+              </button>
+            </Link>
           </div>
         </div>
       </HeroContainer>
-      <MinnvuContainer>
-        <div className="header-container">
-          <h2>¡Obtén tu Minnvu para esta aventura!</h2>
-        </div>
-        <div className="img-container">
-          <div className="minnvu-img-container">
-            <div className="minnvu-img-wrapper">
-              <img
-                src={minnvuImg1}
-                alt="Discover a new dimension with new creatures."
-              />
+      <SupportContainer>
+        <div className="support-container">
+          <div className="support-header-container">
+            <h2>
+              Nuestro primer proyecto: el{" "}
+              <span className="uk-text-orange uk-text-bold">
+                primer peso descentralizado
+              </span>
+            </h2>
+          </div>
+          <div className="support-img-container">
+            <div className="support-img-wrapper">
+              <img src={supportImg} alt="Logo" />
             </div>
-            <div className="minnvu-img-wrapper">
-              <img
-                src={minnvuImg2}
-                alt="Discover a new dimension with new creatures."
-              />
-            </div>
-            <div className="minnvu-img-wrapper">
-              <img
-                src={minnvuImg3}
-                alt="Discover a new dimension with new creatures."
-              />
-            </div>
-            <div className="minnvu-img-wrapper">
-              <img
-                src={minnvuImg4}
-                alt="Discover a new dimension with new creatures."
-              />
+          </div>
+          <div className="support-copy-container">
+            <h3 className="uk-text-bold">
+              Presentamos <span className="uk-text-orange">$XOC</span>
+            </h3>
+            <p>
+              Buscamos la inclusión financiera, y que todas las personas puedan
+              aprovechar los beneficios de DeFi: finanzas abiertas y
+              descentralizadas
+            </p>
+            <h4 className="uk-text-bold">
+              $1.00 MXN = <span className="uk-text-orange">1 $XOC</span>
+            </h4>
+            <p>Sin volatilidad. Totalmente respaldado.</p>
+            <div className="button-container">
+              <a
+                href="https://xocolatl.finance"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="uk-button uk-button-primary uk-button-large uk-text-bold">
+                  ¡Quiero $XOC!
+                </button>
+              </a>
             </div>
           </div>
         </div>
-        <div className="copy-container">
-          <p>
-            Los Minnvus son criaturas digitales que habitan la dimensión de
-            Web3. Sabemos muy poco de ellos. ¡Obtén el tuyo y ayúdanos a
-            descubrir sus secretos!
-          </p>
-          <div className="button-container">
-            <button className="uk-button uk-button-primary uk-button-large">
-              ¡Obtener Minnvu!
-            </button>
-          </div>
-        </div>
-      </MinnvuContainer>
+      </SupportContainer>
       <BenefitsContainer>
         <div className="header-container">
           <h2>
-            Empieza a explorar y aprender, totalmente{" "}
-            <span className="text-bold">gratis</span>.
+            Queremos impulsar el talento y los proyectos. Aprende con nosotros y
+            ayúdanos a construir el futuro. Somos{" "}
+            <span className="text-bold">La DAO</span>.
           </h2>
         </div>
         <div
@@ -92,10 +92,13 @@ const Landing = () => {
                 <img src={learnImg} alt="Learn while you are playing." />
               </div>
               <div className="card-text-wrapper">
-                <h3 className="uk-card-title">Diviértete aprendiendo</h3>
+                <h3 className="uk-card-title uk-text-orange uk-text-bold">
+                  Conecta
+                </h3>
                 <p>
-                  Juega y explora las aplicaciones Web3. Aprenderás de manera
-                  práctica, y tendrás recursos adicionales para reforzar.
+                  Conoce a otras personas que están involucradas en Web3, o por
+                  empezar. Descubre nuevos proyectos, comunidades y
+                  oportunidades.
                 </p>
               </div>
             </div>
@@ -106,10 +109,13 @@ const Landing = () => {
                 <img src={connectImg} alt="Learn while you are playing." />
               </div>
               <div className="card-text-wrapper">
-                <h3 className="uk-card-title">Conecta con amigos y comparte</h3>
+                <h3 className="uk-card-title uk-text-orange uk-text-bold">
+                  Contribuye
+                </h3>
                 <p>
-                  ¡Interacciones sociales en Web3! Conoce a otros exploradores,
-                  comparte aventuras y compite por recompensas.
+                  Tú tienes talento que aportar a La DAO. Las habilidades se
+                  obtienen, a través de práctica y motivación. Aprende y
+                  contribuye con nosotros.
                 </p>
               </div>
             </div>
@@ -120,53 +126,108 @@ const Landing = () => {
                 <img src={earnImg} alt="Learn while you are playing." />
               </div>
               <div className="card-text-wrapper">
-                <h3 className="uk-card-title">Genera valor por tus acciones</h3>
+                <h3 className="uk-card-title uk-text-orange uk-text-bold">
+                  Construye
+                </h3>
                 <p>
-                  Descubre cómo generar ingresos por tu contenido y tus
-                  interacciones. Explora proyectos para invertir, de manera
-                  segura.
+                  Trabajamos en proyectos innovadores y que sean útiles.
+                  Buscamos resolver problemas reales para construir un mejor
+                  futuro.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </BenefitsContainer>
-      <SupportContainer>
+      <FeaturesContainer>
         <div className="support-container">
           <div className="support-header-container">
             <h2>
-              Estás entrando a una nueva dimensión, donde tú tienes el control.
+              Crezcamos la comunidad <br />
+              <span className="uk-text-orange uk-text-bold">
+                resolvamos problemas
+              </span>
             </h2>
           </div>
-          <div className="support-img-container">
-            <div className="support-img-wrapper">
-              <img src={supportImg} alt="Logo" />
+          <div className="support-copy-container">
+            <p>Entrar al mundo descentralizado puede ser intimidante.</p>
+            <p>
+              Con <span className="uk-text-orange uk-text-bold">La DAO</span>,
+              es fácil y divertido.
+            </p>
+
+            <p className="uk-margin-small">
+              Nos conectamos para resolver algunos desafíos como:
+            </p>
+            <ul className="uk-list uk-list-square uk-margin-remove">
+              <li>Empezar en tu camino hacia la descentralización</li>
+              <li>Aprender nuevas tecnologías y protocolos</li>
+              <li>Colaborar en proyectos de impacto social</li>
+            </ul>
+            <div className="uk-margin-large uk-flex uk-flex-center uk-width-1-1">
+              <Link to="/contacto">
+                <button className="uk-button uk-button-primary uk-button-large uk-text-bold">
+                  ¡Quiero saber más!
+                </button>
+              </Link>
             </div>
           </div>
-          <div className="support-copy-container">
-            <p>
-              Te acompañamos durante el camino. Con nosotros, descubrirás nuevas
-              aplicaciones y empezar a interactuar con el futuro del internet.
-            </p>
-            <p>Te damos la bienvenida a Web3</p>
-            <div className="button-container">
-              <button className="uk-button uk-button-primary uk-button-large">
-                ¡Quiero explorar!
-              </button>
+          {/* <Link
+            to="/contacto"
+            className="uk-width-1-1 uk-margin uk-hidden@m uk-flex uk-flex-center"
+          >
+            <button className="uk-button uk-button-primary uk-button-large uk-text-bold">
+              Unirme
+            </button>
+          </Link> */}
+          <div className="support-img-container">
+            <div className="support-img-wrapper">
+              <img src={featureImg} alt="Logo" />
             </div>
           </div>
         </div>
-      </SupportContainer>
+      </FeaturesContainer>
       <FooterContainer>
-        <div className="text-container">Innvertir © 2023</div>
+        <div className="text-container">
+          <div className="uk-logo uk-flex uk-flex-middle uk-margin-small-right">
+            <img
+              data-src={logo}
+              width="24"
+              height="24"
+              alt=""
+              data-uk-img=""
+              uk-image="true"
+            />
+          </div>
+          <span className="uk-text-bold uk-margin-small-right">La DAO</span> ©
+          2023
+        </div>
         <div className="social-icons">
-          <a href="https://www.lensfrens.xyz/innvertir.lens">Lens 🌱</a>
-          <a href="https://twitter.com/innvertir" uk-icon="twitter"></a>
           <a
-            href="https://www.instagram.com/innvertir/"
+            href="https://www.lensfrens.xyz/innvertir.lens"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Lens 🌱
+          </a>
+          <a
+            href="https://twitter.com/LaDAO_Club"
+            target="_blank"
+            rel="noopener noreferrer"
+            uk-icon="twitter"
+          ></a>
+          <a
+            href="https://www.instagram.com/LaDAO/"
+            target="_blank"
+            rel="noopener noreferrer"
             uk-icon="instagram"
           ></a>
-          <a href="https://www.youtube.com/@innvertir" uk-icon="youtube"></a>
+          <a
+            href="https://discord.gg/tQXDnJrxX3"
+            target="_blank"
+            rel="noopener noreferrer"
+            uk-icon="discord"
+          ></a>
         </div>
       </FooterContainer>
     </Fragment>
@@ -181,8 +242,8 @@ const HeroContainer = styled.section`
 
   background-image: linear-gradient(
       to bottom,
-      rgba(31, 0, 69, 0.975),
-      rgba(46, 19, 89, 0.5)
+      rgba(46, 46, 44, 1),
+      rgba(105, 113, 76, 0.65)
     ),
     url(${heroImg});
   background-size: cover;
@@ -192,34 +253,39 @@ const HeroContainer = styled.section`
   div.hero-copy-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 60px 0 120px 0;
+    justify-content: center;
+    padding: 60px 15px 120px 15px;
     text-align: center;
-    h1 {
+    h1.uk-text-bold {
+      color: #fafafa;
+      font-family: "Maven Pro" !important;
+    }
+    h3 {
       color: #fafafa;
     }
 
     div.button-container {
       display: flex;
       justify-content: center;
+      margin-top: 40px;
     }
 
-    button.uk-button.uk-button-large {
+    div.button-container > a > button.uk-button.uk-button-large {
       display: flex;
       align-items: center;
       font-size: 1.25rem;
-      padding: 0 20px;
-      div.btn-logo-container > svg {
-        max-height: 1.85rem;
-        max-width: 48px;
-      }
+      font-weight: bold;
+      padding: 0 40px;
+    }
+    div.button-container > a:hover {
+      text-decoration: none;
     }
   }
 
   @media screen and (min-width: 768px) {
     align-items: center;
     div.hero-copy-container {
-      width: 50%;
+      width: 70%;
       text-align: center;
       margin-top: 80px;
     }
@@ -229,7 +295,10 @@ const HeroContainer = styled.section`
       justify-content: center;
       margin-top: 40px;
     }
-    div.hero-copy-container > div.button-container > button {
+    div.hero-copy-container
+      > div.button-container
+      > a
+      > button.uk-button.uk-button-large {
       font-size: 1.15rem;
     }
   }
@@ -255,113 +324,175 @@ const HeroContainer = styled.section`
   }
 `;
 
-const MinnvuContainer = styled.section`
+const FeaturesContainer = styled.section`
   width: 100vw;
   min-height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  div.header-container,
-  div.img-container {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-  div.header-container > h2 {
-    margin-top: 15%;
-    color: #4e2097;
-  }
-  div.img-container > div.minnvu-img-container {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    * {
-      margin-bottom: 10px;
-    }
-  }
-  div.img-container > div.minnvu-img-container > div.minnvu-img-wrapper {
-    width: 45%;
-  }
-  div.img-container > div.minnvu-img-container > div.minnvu-img-wrapper > img {
-    border-radius: 5%;
-    width: 100%;
-  }
-  div.copy-container {
-    width: 90%;
-    p {
-      text-align: center;
-      font-size: 1.1rem;
-    }
-  }
-  div.copy-container > div.button-container {
-    display: flex;
-    justify-content: center;
-    font-size: 1.1rem;
 
-    button.uk-button.uk-button-large {
-      font-size: 1.1rem;
-      margin-bottom: 40px;
-    }
+  div.support-container {
+    margin-top: 10%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  div.support-container > div.support-header-container {
+    text-align: center;
+    width: 95%;
+  }
+
+  div.support-container > div.support-header-container > h2 {
+    color: #2e2e2c;
+    margin-bottom: 20px;
+  }
+
+  div.support-container > div.support-img-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  div.support-container
+    > div.support-img-container
+    > div.support-img-wrapper
+    > img {
+    border-radius: 5%;
+    width: 90%;
+  }
+  div.support-container > div.support-copy-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+  }
+  div.support-container > div.support-copy-container > p,
+  div.support-container > div.support-copy-container > ul > li {
+    text-align: left;
+    font-size: 1.1rem;
+  }
+
+  a > button.uk-button.uk-button-large {
+    font-size: 1.1rem;
   }
 
   @media screen and (min-width: 768px) {
-    div.header-container > h2 {
-      margin-top: 10%;
+    div.support-container {
+      margin-top: 7.5%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
     }
-    div.img-container > div.minnvu-img-container {
-      width: 90%;
+    .support-header-container {
+      width: 100%;
     }
-    div.img-container > div.minnvu-img-container > div.minnvu-img-wrapper {
-      width: 45%;
+    div.support-container > div.support-img-container {
+      width: 60%;
     }
-  }
-  @media screen and (min-width: 960px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    grid-auto-rows: 1fr;
-    padding-left: 25px;
-    padding-right: 25px;
-
-    div.header-container {
-      grid-area: 1 / 1 / 2 / 2;
-      height: 100%;
+    div.support-container > div.support-copy-container {
+      width: 100%;
       display: flex;
-      align-items: end;
-      text-align: center;
-      h2 {
-        margin-bottom: 40px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      p {
+        width: 80%;
+        margin-top: 0;
+        font-size: 1.25rem;
       }
     }
-    div.img-container {
-      grid-area: 1 / 2 / 3 / 3;
-      height: 100%;
-      display: flex;
-      align-items: center;
+
+    div.support-container > div.support-copy-container > ul {
+      margin-left: 40px;
     }
-    div.copy-container {
-      grid-area: 2 / 1 / 3 / 2;
+    div.support-container > div.support-img-container {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    div.support-container {
+      margin-top: 5%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    div.support-header-container {
+      width: 100%;
+    }
+    div.support-container > div.support-img-container {
+      width: 45%;
+    }
+    div.support-container > div.support-copy-container {
+      width: 45%;
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: top;
+      justify-content: start;
       align-items: center;
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-top: 20px;
+      p {
+        width: 95%;
+        margin-top: 0;
+        font-size: 1.25rem;
+      }
     }
+    div.support-container > div.support-copy-container > ul > li {
+      margin-left: 40px;
+    }
+    div.support-container > div.support-img-container {
+      margin-bottom: 20px;
+    }
+    div.support-container
+      > div.support-img-container
+      > div.support-img-wrapper
+      > img {
+      width: 85%;
+    }
+  }
 
-    div.header-container > h2 {
+  @media screen and (min-width: 1280px) {
+    min-height: calc(100vh - 64px);
+    div.support-container {
+      width: 80%;
+    }
+    div.support-container
+      > div.support-img-container
+      > div.support-img-wrapper
+      > img {
+      border-radius: 5%;
+      width: 80%;
+    }
+    div.support-container {
       margin-top: 5%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
     }
-    div.img-container > div.minnvu-img-container {
+    div.support-header-container {
       width: 100%;
+      margin-bottom: 20px;
     }
-    div.img-container > div.minnvu-img-container > div.minnvu-img-wrapper {
-      width: 45%;
+    div.support-container > div.support-img-container {
+      width: 50%;
+      margin-bottom: 0;
+    }
+    div.support-container > div.support-copy-container {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        width: 80%;
+        margin-top: 0;
+        font-size: 1.25rem;
+      }
     }
   }
 `;
@@ -372,7 +503,7 @@ const BenefitsContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #1f0045;
+  background-color: #2e2e2c;
 
   div.header-container {
     width: 100%;
@@ -467,6 +598,7 @@ const BenefitsContainer = styled.section`
   }
   @media screen and (min-width: 960px) {
     div.header-container {
+      width: 80%;
       margin: 60px 0 0px 0;
     }
     div.benefits-cards-container {
@@ -500,8 +632,9 @@ const SupportContainer = styled.section`
   align-items: center;
 
   div.support-container {
-    margin-top: 5%;
+    margin-top: 10%;
     width: 90%;
+    text-align: center;
   }
   div.support-container > div.support-header-container {
     text-align: center;
@@ -509,7 +642,7 @@ const SupportContainer = styled.section`
   }
 
   div.support-container > div.support-header-container > h2 {
-    color: #4e2097;
+    color: #2e2e2c;
     margin-bottom: 20px;
   }
 
@@ -523,7 +656,10 @@ const SupportContainer = styled.section`
     > div.support-img-wrapper
     > img {
     border-radius: 5%;
-    width: 100%;
+    width: 75%;
+  }
+  div.support-container > div.support-copy-container > h4 {
+    margin-top: 10px;
   }
   div.support-container > div.support-copy-container > p {
     text-align: center;
@@ -536,13 +672,13 @@ const SupportContainer = styled.section`
 
     button.uk-button.uk-button-large {
       font-size: 1.1rem;
-      margin-bottom: 40px;
     }
+    margin: 40px 0 40px 0;
   }
 
   @media screen and (min-width: 768px) {
-    min-height: auto;
     div.support-container {
+      height: 100%;
       margin-top: 5%;
       display: flex;
       flex-wrap: wrap;
@@ -553,34 +689,25 @@ const SupportContainer = styled.section`
       margin-bottom: 20px;
     }
     div.support-container > div.support-img-container {
-      width: 50%;
+      margin-bottom: 40px;
     }
-    div.support-container > div.support-copy-container {
+    div.support-container
+      > div.support-img-container
+      > div.support-img-wrapper
+      > img {
       width: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      p {
-        width: 80%;
-        margin-top: 0;
-        font-size: 1.25rem;
-      }
-    }
-    div.support-container > div.support-img-container {
-      margin-bottom: 0;
     }
   }
-  @media screen and (min-width: 1280px) {
-    height: calc(100vh - 64px);
+  @media screen and (min-width: 960px) {
     div.support-container {
-      width: 80%;
+      width: 90%;
     }
     div.support-container
       > div.support-img-container
       > div.support-img-wrapper
       > img {
       border-radius: 5%;
+      margin: 20px 0;
       width: 80%;
     }
     div.support-container {
@@ -609,6 +736,16 @@ const SupportContainer = styled.section`
         font-size: 1.25rem;
       }
     }
+
+    div.support-container > div.support-copy-container > div.button-container {
+      margin: 20px 0 40px 0;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    height: calc(100vh - 64px);
+    div.support-container {
+      width: 80%;
+    }
   }
 `;
 
@@ -616,10 +753,10 @@ const FooterContainer = styled.section`
   display: flex;
   align-items: center;
   padding: 20px 15px;
-  background-color: #1f0045;
-  color: #f8f8f8;
+  background-color: #2e2e2c;
+  color: #f6f2e6;
   a {
-    color: #f8f8f8;
+    color: #f6f2e6;
   }
   .text-container,
   .social-icons {

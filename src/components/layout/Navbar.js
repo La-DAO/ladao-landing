@@ -2,12 +2,12 @@ import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-import logo from "../../assets/512-red-logo.svg";
+import logo from "../../assets/logo/d-letter-generic-logo.png";
 
 const ROUTES = [
-  ["Juega", "/jugar"],
-  ["Aprende", "/aprender"],
-  ["Explora", "/explorar"],
+  ["Proyectos", "/proyectos"],
+  ["Servicios", "/servicios"],
+  ["Nosotros", "/nosotros"],
 ];
 
 const Navbar = () => {
@@ -31,7 +31,7 @@ const Navbar = () => {
               uk-image="true"
             />
           </div>
-          innvertir
+          <span className="uk-text-bold">La DAO</span>
         </NavLink>
       </div>
       <div className="uk-navbar-right">
@@ -47,8 +47,8 @@ const Navbar = () => {
             </li>
           ))}
           <li onClick={navMenuToggle}>
-            <NavLink to="/auth/ingresar">
-              <button className="uk-button uk-button-primary">Entrar</button>
+            <NavLink to="/contacto">
+              <button className="uk-button uk-button-primary">Unirme</button>
             </NavLink>
           </li>
         </Menu>
@@ -58,7 +58,7 @@ const Navbar = () => {
 };
 
 const StyledNav = styled.nav`
-  background-color: #1f0045 !important;
+  background-color: #2e2e2c !important;
   max-height: 64px;
   max-width: 100%;
 
@@ -66,6 +66,7 @@ const StyledNav = styled.nav`
   div > a {
     text-transform: none;
     color: #fff;
+    font-weight: bold;
   }
 
   .uk-navbar-item,
@@ -119,8 +120,8 @@ const StyledNav = styled.nav`
       position: absolute;
       height: calc(100vh - 64px);
       top: 64px;
-      background-color: #29005c;
-      border-left: #1f0045 solid 5px;
+      background-color: #2e2e2c;
+      border-left: #25413b solid 5px;
       margin: 0 !important;
       transform: translateX(100%);
       transition: transform 0.5s ease-in;
@@ -133,7 +134,7 @@ const StyledNav = styled.nav`
     }
 
     #nav-menu > * {
-      background-color: #29005c;
+      background-color: #2e2e2c;
       height: 64px;
     }
 

@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Raleway:wght@300;400;700&display=swap");
 
 body {
   margin: 0;
-  font-family: "Nunito", "Maven Pro", "Oxygen", "Roboto", -apple-system,
+  font-family: "Raleway", "Maven Pro", "Oxygen", "Roboto", -apple-system,
     BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif !important;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +15,7 @@ main {
   max-width: 100%;
   height: calc(100vh - 64px);
   background-color: #fbfbfb;
-  font-family: "Nunito", "Maven Pro", "Oxygen", "Roboto", -apple-system,
+  font-family: "Raleway", "Maven Pro", "Oxygen", "Roboto", -apple-system,
     BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif !important;
   -webkit-font-smoothing: antialiased;
@@ -51,14 +51,22 @@ button.uk-button.uk-button-white:hover {
 }
 
 button.uk-button.uk-button-primary {
-  background-color: #ff4a4a;
-  border-color: #ff4a4a;
+  background-color: #f25b3d;
+  border-color: #f25b3d;
   color: #fff;
 }
 
 button.uk-button.uk-button-primary:hover {
   background-color: #ff7070;
   border-color: #ff7070;
+}
+
+.uk-text-orange {
+  color: #f25b3d !important;
+}
+
+.uk-list-square > ::before {
+  color: #f25b3d !important;
 }
 
 @media screen and (max-width: 768px) {

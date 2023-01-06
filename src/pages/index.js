@@ -1,7 +1,8 @@
-import About from "./About";
-import Account from "./Account";
-import Home from "./Home";
+import Contacto from "./Contacto";
 import Landing from "./Landing";
+import Nosotros from "./Nosotros";
 import NotFound from "./NotFound";
+import Proyectos from "./Proyectos";
+import Servicios from "./Servicios";
 
-export { About, Account, Home, Landing, NotFound };
+export { Contacto, Landing, Nosotros, NotFound, Proyectos, Servicios };
