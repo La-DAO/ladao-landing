@@ -1,12 +1,13 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Typewriter from "typewriter-effect";
 import heroImg from "../assets/bckgd-img/HeroSectionBckgd.jpeg";
 import featureImg from "../assets/landing-page/features-connections.webp";
 import supportImg from "../assets/landing-page/xoc-currency.jpeg";
-import learnImg from "../assets/card-images/cognitive-learn.png";
-import connectImg from "../assets/card-images/world-connect-community.png";
-import earnImg from "../assets/card-images/gamification-earn-rewards.png";
+import learnImg from "../assets/card-images/connection.png";
+import connectImg from "../assets/card-images/contribute.png";
+import earnImg from "../assets/card-images/team-building.png";
 
 const Landing = () => {
   return (
@@ -16,7 +17,23 @@ const Landing = () => {
           <h1 className="uk-text-bold">
             Conectamos comunidades
             <br />
-            Impulsamos DeFi
+            Impulsamos
+            <span className="uk-text-orange">
+              <Typewriter
+                wrapperClassName="uk-text-orange"
+                options={{
+                  strings: [
+                    "DeFi",
+                    "Web3",
+                    "Descentralización",
+                    "Stablecoins",
+                    "NFTs",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </span>
           </h1>
           <h3>
             Conecta, contribuye y construye el futuro del internet, la propiedad
@@ -186,49 +203,6 @@ const Landing = () => {
           </div>
         </div>
       </FeaturesContainer>
-      {/* <FooterContainer>
-        <div className="text-container">
-          <div className="uk-logo uk-flex uk-flex-middle uk-margin-small-right">
-            <img
-              data-src={logo}
-              width="24"
-              height="24"
-              alt=""
-              data-uk-img=""
-              uk-image="true"
-            />
-          </div>
-          <span className="uk-text-bold uk-margin-small-right">La DAO</span> ©
-          2023
-        </div>
-        <div className="social-icons">
-          <a
-            href="https://www.lensfrens.xyz/innvertir.lens"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Lens 🌱
-          </a>
-          <a
-            href="https://twitter.com/LaDAO_Club"
-            target="_blank"
-            rel="noopener noreferrer"
-            uk-icon="twitter"
-          ></a>
-          <a
-            href="https://www.instagram.com/LaDAO/"
-            target="_blank"
-            rel="noopener noreferrer"
-            uk-icon="instagram"
-          ></a>
-          <a
-            href="https://discord.gg/tQXDnJrxX3"
-            target="_blank"
-            rel="noopener noreferrer"
-            uk-icon="discord"
-          ></a>
-        </div>
-      </FooterContainer> */}
     </Fragment>
   );
 };
@@ -257,6 +231,10 @@ const HeroContainer = styled.section`
     text-align: center;
     h1.uk-text-bold {
       color: #fafafa;
+      font-family: "Maven Pro" !important;
+    }
+    h1.uk-text-bold > span.uk-text-orange {
+      color: #f25b3d;
       font-family: "Maven Pro" !important;
     }
     h3 {
