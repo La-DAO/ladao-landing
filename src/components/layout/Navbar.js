@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-import logo from "../../assets/logo/d-letter-generic-logo.png";
+import logo from "../../assets/logo/logo-v2-2.svg";
 
 const ROUTES = [
   ["Proyectos", "/proyectos"],
@@ -12,6 +12,7 @@ const ROUTES = [
 
 const Navbar = () => {
   const navMenuRef = useRef();
+  let activeClassName = "uk-text-orange";
 
   const navMenuToggle = () => {
     navMenuRef.current.classList.toggle("nav-menu-active");
@@ -43,7 +44,14 @@ const Navbar = () => {
         <Menu ref={navMenuRef} id="nav-menu" className="uk-navbar-nav">
           {ROUTES.map((route, index) => (
             <li key={index} onClick={navMenuToggle}>
-              <NavLink to={route[1]}>{route[0]}</NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? activeClassName : undefined
+                }
+                to={route[1]}
+              >
+                {route[0]}
+              </NavLink>
             </li>
           ))}
           <li onClick={navMenuToggle}>

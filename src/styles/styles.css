@@ -25,6 +25,7 @@ main {
 }
 
 main > div.uk-container {
+  min-height: calc(100vh - 64px);
   background-color: #fbfbfb;
   max-width: 100%;
   display: flex;
@@ -34,7 +35,8 @@ main > div.uk-container {
 }
 button.uk-button,
 input.uk-input,
-select.uk-select {
+select.uk-select,
+textarea.uk-textarea {
   border-radius: 5px;
   text-transform: none;
 }

@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../assets/logo/d-letter-generic-logo.png";
 import heroImg from "../assets/bckgd-img/HeroSectionBckgd.jpeg";
 import featureImg from "../assets/landing-page/features-connections.webp";
 import supportImg from "../assets/landing-page/xoc-currency.jpeg";
@@ -187,7 +186,7 @@ const Landing = () => {
           </div>
         </div>
       </FeaturesContainer>
-      <FooterContainer>
+      {/* <FooterContainer>
         <div className="text-container">
           <div className="uk-logo uk-flex uk-flex-middle uk-margin-small-right">
             <img
@@ -229,7 +228,7 @@ const Landing = () => {
             uk-icon="discord"
           ></a>
         </div>
-      </FooterContainer>
+      </FooterContainer> */}
     </Fragment>
   );
 };
