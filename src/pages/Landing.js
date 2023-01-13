@@ -61,7 +61,7 @@ const Landing = () => {
             <p>Sin volatilidad. Totalmente respaldado.</p>
             <div className="button-container">
               <a
-                href="https://xocolatl.finance"
+                href="https://rough-hat-9644.on.fleek.co/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

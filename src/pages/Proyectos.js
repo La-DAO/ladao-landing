@@ -19,7 +19,7 @@ const Proyectos = () => {
             </p>
             <div className="button-container uk-margin">
               <a
-                href="https://xocolatl.finance"
+                href="https://rough-hat-9644.on.fleek.co/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
