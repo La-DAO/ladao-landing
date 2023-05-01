@@ -12,3 +12,9 @@ Clone the repository
   git clone https://github.com/angelmc32/uikit-redux-react-starter
   npm install
 ```
+
+## Run locally
+
+```bash
+npm run start
+```
